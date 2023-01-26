@@ -24,15 +24,20 @@ export default class Notification {
     document.querySelector('.notifications').replaceChildren(this.container);
   }
 
-  render ({ type, price }){
+  render ({type, price }){
 
     console.log(type);
+
+    let Name= 'notification type-'+classNames(type, {'is-danger': type === Card.types.HAWAIIAN });
+    console.log(Name);
 
    
 
             
     const template = `
-    <div class="${classNames('notification type-' ,{type:true}, {'is-danger': type === Card.types.HAWAIIAN })}">
+    <div class="${Name}">
+
+    
     
     <button class='delete'></button>
     <span class="type"> ${type}</span> (<span class='price'> ${formatCurrency(price)}</span>) has been added to your order!
