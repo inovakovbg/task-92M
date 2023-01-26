@@ -30,26 +30,18 @@ export default class Card extends EventEmitter {
 
     console.log(this._type)
 
-    const template =
-    `<div class='card type-${this._type}'>
-    <div class='emoji'>🍕</div>
-    <span class='type'>${this._type}</span>
+    const template =`
+    <div class="card type-this.type> ${classNames({
+          "is-danger": this._type === Card.types.HAWAIIAN,
+        })}">
+      <div class="emoji">🍕</div>
+      <span class="type">${this._type}</span>
     </div>
-    `;
+        `
 
-
-//      `
-// <div class="card type-this.type> ${classNames({
-//       "is-danger": this._type === Card.types.HAWAIIAN,
-//     })}">
-//   <div class="emoji">🍕</div>
-//   <span class="type">${this._type}</span>
-// </div>
-//     `
-    
     ;
-    
-   console.log(this._type);
+
+    console.log(this._type);
 
     this.container.innerHTML = template;
     this.container.addEventListener("click", () => {
