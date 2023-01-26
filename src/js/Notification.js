@@ -20,6 +20,10 @@ export default class Notification {
     this.NDiv = document.querySelector('.notifications')
   }
 
+  empty(){
+    document.querySelector('.notifications').replaceChildren(this.container);
+  }
+
   render ({ type, price }){
     const template = `
             <div class='notification type-${type} ${classNames({ "is-danger": type === Card.types.HAWAIIAN })}'>
@@ -27,11 +31,14 @@ export default class Notification {
             <span class="type">${type}</span> (<span class='price'> ${formatCurrency(price)}</span>) has been added to your order!
             </div>`;
     this.container.innerHTML = template;
-
+    this.empty;
+    
     this.NDiv.appendChild(this.container);
 
     let button = this.container.querySelector('.delete')
     button.addEventListener('click', () => this.DeleteN())
+   
+   
 };
 
 
