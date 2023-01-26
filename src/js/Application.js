@@ -14,7 +14,7 @@ export default class Application extends EventEmitter {
 
     const pizzas = [
       {
-        type: Card.types.HAWAIIAN,
+        type: Card.types.hawaiian,
         price: 8.99,
       },
       {
