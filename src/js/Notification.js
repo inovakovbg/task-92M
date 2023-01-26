@@ -28,14 +28,14 @@ export default class Notification {
 
     console.log(type);
 
-    let Name= 'notification type-'+classNames(type, {'is-danger': type === Card.types.HAWAIIAN });
+    let Name= classNames(type, {'is-danger': type === Card.types.HAWAIIAN });
     console.log(Name);
 
    
 
             
     const template = `
-    <div class="${Name}">
+    <div class='notification type-${Name}'>
 
     
     
