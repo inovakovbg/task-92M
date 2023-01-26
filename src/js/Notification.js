@@ -7,9 +7,9 @@ import { formatCurrency } from "./utils.js";
 export default class Notification {
   static get types() {
     return {
-      PEPPERONI: "Pepperoni",
-      MARGHERITA: "Margherita",
-      HAWAIIAN: "Hawaiian",
+      PEPPERONI: "pepperoni",
+      MARGHERITA: "margherita",
+      HAWAIIAN: "hawaiian",
     };
   }
 
@@ -25,10 +25,13 @@ export default class Notification {
   }
 
   render ({ type, price }){
+
+    console.log(type);
+
     const template = `
             <div class='notification type-${type} ${classNames({ "is-danger": type === Card.types.HAWAIIAN })}'>
             <button class='delete'></button>
-            <span class="type">${type}</span> (<span class='price'> ${formatCurrency(price)}</span>) has been added to your order!
+            <span class="type"> ${type}</span> (<span class='price'> ${formatCurrency(price)}</span>) has been added to your order!
             </div>`;
     this.container.innerHTML = template;
     this.empty;
