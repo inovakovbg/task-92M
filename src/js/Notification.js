@@ -35,13 +35,16 @@ export default class Notification {
 
             
     const template = `
-    <div class='notification type-${Name}'>
+    <div class="${classNames('notification', `type-${type}`, {'is-danger': type === 'hawaiian'})}">
+    
 
     
     
     <button class='delete'></button>
     <span class="type"> ${type}</span> (<span class='price'> ${formatCurrency(price)}</span>) has been added to your order!
     </div>`;
+
+    
 
 
     this.container.innerHTML = template;
