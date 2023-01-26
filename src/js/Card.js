@@ -12,7 +12,7 @@ export default class Card extends EventEmitter {
     return {
       PEPPERONI: "pepperoni",
       MARGHERITA: "margherita",
-      HAWAIIAN: "hawaiian",
+      hawaiian: "hawaiian",
     };
   }
 
@@ -29,7 +29,7 @@ export default class Card extends EventEmitter {
   render() {
     const template = `
 <div class="card type-${this._type}> ${classNames({
-      "is-danger": this._type === Card.types.HAWAIIAN,
+      "is-danger": this._type === Card.types.hawaiian,
     })}">
   <div class="emoji">🍕</div>
   <span class="type">${this._type}</span>
