@@ -32,7 +32,7 @@ export default class Notification {
 
             
     const template = `
-    <div class="notification type-${classNames({type, "is-danger": type === Card.types.HAWAIIAN })}">
+    <div class="${classNames('notification type-' ,{type:true}, {'is-danger': type === Card.types.HAWAIIAN })}">
     
     <button class='delete'></button>
     <span class="type"> ${type}</span> (<span class='price'> ${formatCurrency(price)}</span>) has been added to your order!
