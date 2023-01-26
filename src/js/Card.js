@@ -23,12 +23,12 @@ export default class Card extends EventEmitter {
     this._price = price;
 
     this.container = document.createElement("div");
-    this.container.classList.add("card");
+    this.container.classList.add("card-container");
   }
 
   render() {
     const template = `
-<div class="card type-${this._type}> ${classNames({
+<div class="card type-hawaiian> ${classNames({
       "is-danger": this._type === Card.types.HAWAIIAN,
     })}">
   <div class="emoji">🍕</div>
