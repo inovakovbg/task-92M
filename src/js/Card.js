@@ -4,7 +4,7 @@ import EventEmitter from "eventemitter3";
 export default class Card extends EventEmitter {
   static get events() {
     return {
-      ADD_TO_CART: "Added",
+      ADD_TO_CART: "add to cart",
     };
   }
 
@@ -23,7 +23,7 @@ export default class Card extends EventEmitter {
     this._price = price;
 
     this.container = document.createElement("div");
-    this.container.classList.add("card-container");
+    this.container.classList.add("card");
   }
 
   render() {
