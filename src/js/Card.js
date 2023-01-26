@@ -10,9 +10,9 @@ export default class Card extends EventEmitter {
 
   static get types() {
     return {
-      PEPPERONI: "pepperoni",
-      MARGHERITA: "margherita",
-      HAWAIIAN: "hawaiian",
+      PEPPERONI: "Pepperoni",
+      MARGHERITA: "Margherita",
+      HAWAIIAN: "Hawaiian",
     };
   }
 

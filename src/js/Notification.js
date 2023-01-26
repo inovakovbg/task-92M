@@ -7,9 +7,9 @@ import { formatCurrency } from "./utils.js";
 export default class Notification {
   static get types() {
     return {
-      PEPPERONI: "pepperoni",
-      MARGHERITA: "margherita",
-      HAWAIIAN: "hawaiian",
+      PEPPERONI: "Pepperoni",
+      MARGHERITA: "Margherita",
+      HAWAIIAN: "Hawaiian",
     };
   }
 
@@ -31,10 +31,10 @@ export default class Notification {
     this.NDiv.appendChild(this.container);
 
     let button = this.container.querySelector('.delete')
-    button.addEventListener('click', () => this.Delete())
+    button.addEventListener('click', () => this.DeleteN())
 };
 
 
-Delete() {    this.notificationDiv.removeChild(this.container)}
+DeleteN() {this.NDiv.removeChild(this.container)};
 
 }
