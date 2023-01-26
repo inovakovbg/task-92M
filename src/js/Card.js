@@ -4,7 +4,7 @@ import EventEmitter from "eventemitter3";
 export default class Card extends EventEmitter {
   static get events() {
     return {
-      ADD_TO_CART: "add_to_cart",
+      ADD_TO_CART: "Added",
     };
   }
 
@@ -28,13 +28,15 @@ export default class Card extends EventEmitter {
 
   render() {
     const template = `
-<div class="card type-${this._type} ${classNames({
+<div class="card type-${this._type}> ${classNames({
       "is-danger": this._type === Card.types.HAWAIIAN,
     })}">
   <div class="emoji">🍕</div>
   <span class="type">${this._type}</span>
 </div>
     `;
+    
+   // console.log(`${this._type} , ${this._price},`)
 
     this.container.innerHTML = template;
     this.container.addEventListener("click", () => {
