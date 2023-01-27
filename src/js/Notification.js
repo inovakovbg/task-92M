@@ -1,6 +1,6 @@
-import Card from "./Card.js";
+// import Card from "./Card.js";
 import classNames from "classnames";
-import EventEmitter from "eventemitter3";
+// import EventEmitter from "eventemitter3";
 import { formatCurrency } from "./utils.js";
 
 
@@ -21,34 +21,34 @@ export default class Notification {
   }
 
   empty(){
-    document.querySelector('.notifications').replaceChildren(this.container);
+    this.container.remove()
   }
 
   render ({type, price }){
 
     console.log(type);
 
-    let Name= classNames(type, {'is-danger': type === Card.types.HAWAIIAN });
-    console.log(Name);
+    // let Name= classNames(type, {'is-danger': type === Card.types.HAWAIIAN });
+    // console.log(Name);
 
    
 
             
     const template = `
-    <div class="${classNames('notification', `type-${type}`, {'is-danger': type === 'hawaiian'})}">
+    <div class="${classNames('notification', `type-${type}`, {'is-danger': type === 'hawaiian' ? true : false})}">
     
 
     
     
     <button class='delete'></button>
-    <span class="type"> ${type}</span> (<span class='price'> ${formatCurrency(price)}</span>) has been added to your order!
+    🍕<span class="type"> ${type}</span> (<span class='price'> ${formatCurrency(price)}</span>) has been added to your order!
     </div>`;
 
     
 
 
     this.container.innerHTML = template;
-    this.empty;
+   
     
     this.NDiv.appendChild(this.container);
 
