@@ -20,16 +20,21 @@ export default class Notification {
     this.NDiv = document.querySelector('.notifications')
   }
 
-  empty(){
-    this.container.remove()
-  }
+  // empty(){
+  //   this.container.remove()
+  // }
 
   render ({type, price }){
 
     console.log(type);
 
-    // let Name= classNames(type, {'is-danger': type === Card.types.HAWAIIAN });
+    // let Name= ('notification type-'+classNames(type,{'is-danger': type === 'hawaiian' ? true : false}));
     // console.log(Name);
+
+    let Name= classNames('notification', `type-${type}`, {'is-danger': type === 'hawaiian'});
+    console.log(Name);
+
+    
 
    
 
