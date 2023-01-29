@@ -20,9 +20,9 @@ export default class Notification {
     this.NDiv = document.querySelector('.notifications')
   }
 
-  // empty(){
-  //   this.container.remove()
-  // }
+  empty(){
+    this.container.remove()
+  }
 
   render ({type, price }){
 
@@ -31,7 +31,7 @@ export default class Notification {
     // let Name= ('notification type-'+classNames(type,{'is-danger': type === 'hawaiian' ? true : false}));
     // console.log(Name);
 
-    let Name= classNames('notification', `type-${type}`, {'is-danger': type === 'hawaiian'});
+    let Name= classNames('notification type', `type-${type}`, {'is-danger': type === 'hawaiian'});
     console.log(Name);
 
     
@@ -40,7 +40,7 @@ export default class Notification {
 
             
     const template = `
-    <div class="${classNames('notification', `type-${type}`, {'is-danger': type === 'hawaiian' ? true : false})}">
+    <div class="${classNames('notification type', `type-${type}`, {'is-danger': type === 'hawaiian' ? true : false})}">
     
 
     
