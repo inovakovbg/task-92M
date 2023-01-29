@@ -61,9 +61,10 @@ export default class Card extends EventEmitter {
       });
       console.log(this._type);
     });
-    this.addListener(Card.events.ADD_TO_CART,(obj) => {
+    
+    this.addListener(Card.events.ADD_TO_CART,(args) => {
     let n=new Notification();
-    n.render(obj);
+    n.render(args);
   })
   }
 }
