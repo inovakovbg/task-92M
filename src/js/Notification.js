@@ -1,6 +1,6 @@
-// import Card from "./Card.js";
+import Card from "./Card.js";
 import classNames from "classnames";
-// import EventEmitter from "eventemitter3";
+import EventEmitter from "eventemitter3";
 import { formatCurrency } from "./utils.js";
 
 
@@ -28,6 +28,9 @@ export default class Notification {
 
     console.log(type);
 
+    this._type=type;
+    console.log(this._type);
+
     let Name= ('notification type-'+classNames(type,{'is-danger': type === 'hawaiian' ? true : false}));
     console.log(Name);
 
@@ -40,7 +43,8 @@ export default class Notification {
 
             
     const template = `
-    <div class='notification type-${type} ${classNames({ "is-danger": type === 'hawaiian'})}'>
+    <div class="notification type-${this._type} ${classNames({"is-danger": this._type === Card.types.HAWAIIAN,})}">
+
     
 
     
