@@ -43,8 +43,7 @@ export default class Notification {
 
             
     const template = `
-    <div class="notification type-${this._type} ${classNames({"is-danger": this._type === Card.types.HAWAIIAN,})}">
-
+    <div class='notification type-${type} ${classNames({ "is-danger": type === 'hawaiian'})}'>
     
 
     
