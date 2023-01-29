@@ -28,11 +28,11 @@ export default class Notification {
 
     console.log(type);
 
-    // let Name= ('notification type-'+classNames(type,{'is-danger': type === 'hawaiian' ? true : false}));
-    // console.log(Name);
-
-    let Name= classNames('notification type', `type-${type}`, {'is-danger': type === 'hawaiian'});
+    let Name= ('notification type-'+classNames(type,{'is-danger': type === 'hawaiian' ? true : false}));
     console.log(Name);
+
+    // let Name = ('notification type'+${type} ${classNames({ "is-danger": type === Card.types.HAWAIIAN })}>
+    // console.log(Name);
 
     
 
@@ -40,7 +40,7 @@ export default class Notification {
 
             
     const template = `
-    <div class="${classNames('notification type', `type-${type}`, {'is-danger': type === 'hawaiian' ? true : false})}">
+    <div class='notification type-${type} ${classNames({ "is-danger": type === 'hawaiian'})}'>
     
 
     
