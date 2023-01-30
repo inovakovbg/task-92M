@@ -1,3 +1,3 @@
 export function formatCurrency(sum) {
-  return sum.toLocaleString("de-DE", { style: "currency", currency: "EUR" });
+  return sum.toLocaleString("de-DE",{style: "currency", currency: "EUR" });
 }
