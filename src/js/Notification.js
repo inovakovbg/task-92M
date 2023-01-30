@@ -49,7 +49,7 @@ export default class Notification {
     
     
     <button class='delete'></button>
-    🍕<span class="type"> ${type}</span>(${formatCurrency(price)}</span>) has been added to your order!
+    🍕<span class="type"> ${type}</span>(<span class='price'>${formatCurrency(price)}</span>) has been added to your order!
     </div>`;
 
     
